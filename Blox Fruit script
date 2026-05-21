@@ -2471,7 +2471,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == Ms then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -2505,7 +2505,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Diablo" or v.Name == "Deandre" or v.Name == "Urban" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -2561,7 +2561,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService('Workspace').Enemies:GetChildren()) do
                         if v.Name == 'Hydra Enforcer' or v.Name == 'Venomous Assailant' then
                             if v:FindFirstChild('Humanoid') and v:FindFirstChild('HumanoidRootPart') and v.Humanoid.Health > 0 then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -3015,7 +3015,7 @@ task.spawn(function()
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Shark" or v.Name == "Piranha" or v.Name == "Fish Crew Member" then
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild('HumanoidRootPart') and v.Humanoid.Health > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
 
                                 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
                                 EquipTool(SelectWeaponSeaFarm)
@@ -3039,7 +3039,7 @@ task.spawn(function()
                         end
                     elseif v.Name == "Terrorshark" then
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild('HumanoidRootPart') and v.Humanoid.Health > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 SeaUseSkill = true
                                 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
                                 EquipTool(SelectWeaponSeaFarm)
@@ -3065,7 +3065,7 @@ task.spawn(function()
 
                     elseif v.Name == "PirateBrigade" then
                         if v:FindFirstChild("Humanoid") and v.Humanoid.Value > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 
                                 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
                                 EquipTool(SelectWeaponSeaFarm)
@@ -3087,7 +3087,7 @@ task.spawn(function()
                         
                     elseif v.Name == "PirateGrandBrigade" then
                         if v:FindFirstChild("Humanoid") and v.Humanoid.Value > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 
                                 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
                                 EquipTool(SelectWeaponSeaFarm)
@@ -3124,7 +3124,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.SeaBeasts:GetChildren()) do
                     if v.Name == "SeaBeast1" then
                         if v:FindFirstChild('Health') and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
 
                                 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
                                 SeaUseSkill = true
@@ -3289,7 +3289,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v.Name == "PirateGrandBrigade" or v.Name == "PirateBrigade" then
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("Engine") and v.Humanoid.Value > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if (v.VehicleSeat.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 500 then
                                     --SeaMonPosition = v.Body.Part.Position
                                     SeaMonPosition = v.Sails.Position
@@ -3326,7 +3326,7 @@ task.spawn(function()
                         end
                     elseif v.Name == "Shark" or v.Name == "Piranha" or v.Name == "Fish Crew Member" or v.Name == "Terrorshark" then
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 500 then
                                     SeaMonPosition = v.HumanoidRootPart.Position
                                     if game:GetService("Players").LocalPlayer.Character:FindFirstChild(SelectWeaponSeaFarm) then
@@ -3366,7 +3366,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.SeaBeasts:GetChildren()) do
                     if v.Name == "SeaBeast1" then
                         if v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 500 then
                                     SeaMonPosition = v.HumanoidRootPart.Position
                                     if game:GetService("Players").LocalPlayer.Character:FindFirstChild(SelectWeaponSeaFarm) then
@@ -3828,7 +3828,7 @@ task.spawn(function()
                     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     v.Humanoid.Health = 0
                                     v.HumanoidRootPart.CanCollide = false
                                     sethiddenproperty(game:GetService('Players').LocalPlayer,"SimulationRadius",math.huge)
@@ -3919,7 +3919,7 @@ task.spawn(function()
                     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     v.Humanoid.Health = 0
                                     v.HumanoidRootPart.CanCollide = false
                                     sethiddenproperty(game:GetService('Players').LocalPlayer,"SimulationRadius",math.huge)
@@ -3954,7 +3954,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Cocoa Warrior" or v.Name == "Chocolate Bar Battler" or v.Name == "Sweet Thief" or v.Name == "Candy Rebel" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -4048,7 +4048,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == Ms then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -4078,7 +4078,7 @@ task.spawn(function()
                     for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
                         if v.Name == Ms then
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -4137,7 +4137,7 @@ task.spawn(function()
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                         if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name =="Demonic Soul" or v.Name == "Posessed Mummy" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 EquipTool(SelectWeapon)
                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                 v.HumanoidRootPart.CanCollide = false
@@ -4187,7 +4187,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                         if v.Name == "Ship Steward" or v.Name == "Ship Engineer" or v.Name == "Ship Deckhand" or v.Name == "Ship Officer" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 EquipTool(SelectWeapon)
                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                 v.HumanoidRootPart.CanCollide = false
@@ -4228,7 +4228,7 @@ task.spawn(function()
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                         if v.Name then
                             if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude <= 1000 then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -4280,7 +4280,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == Ms then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -4320,7 +4320,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == Ms then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -4433,7 +4433,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v.Name == Mastery_Farm_Name then 
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if (v.HumanoidRootPart.Position - plr.Character.HumanoidRootPart.Position).Magnitude < 50 then
                                     EquipTool(CurrentEquipDevilFruit)
                                     PositionSkillMasteryDevilFruit = v.HumanoidRootPart.Position
@@ -4497,7 +4497,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                                 if v.Name == Ms then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                             UseSkill = true
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4535,7 +4535,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if v.Name == Ms then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseSkill = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4563,7 +4563,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
                     if v.Name and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude <= 2000 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseSkill = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4596,7 +4596,7 @@ task.spawn(function()
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name =="Demonic Soul" or v.Name == "Posessed Mummy" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseSkill = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4645,7 +4645,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if v.Name == "Ship Steward" or v.Name == "Ship Engineer" or v.Name == "Ship Deckhand" or v.Name == "Ship Officer" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseSkill = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4686,7 +4686,7 @@ task.spawn(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if v.Name == "Cake Prince" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                         UseSkill = true
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4716,7 +4716,7 @@ task.spawn(function()
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                                 if (v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                             UseSkill = true
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4781,7 +4781,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v.Name == Mastery_Farm_Name then 
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if (v.HumanoidRootPart.Position - plr.Character.HumanoidRootPart.Position).Magnitude < 50 then
                                     EquipTool(CurrentEquipGun)
                                     PositionSkillMasteryGun = v.HumanoidRootPart.Position
@@ -4848,7 +4848,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                                 if v.Name == Ms then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                             UseGunMastery = true
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4888,7 +4888,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if v.Name == Ms then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseGunMastery = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4918,7 +4918,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
                     if v.Name and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude <= 2000 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseGunMastery = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -4953,7 +4953,7 @@ task.spawn(function()
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name =="Demonic Soul" or v.Name == "Posessed Mummy" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseGunMastery = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -5003,7 +5003,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                         if v.Name == "Ship Steward" or v.Name == "Ship Engineer" or v.Name == "Ship Deckhand" or v.Name == "Ship Officer" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                     UseGunMastery = true
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -5045,7 +5045,7 @@ task.spawn(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if v.Name == "Cake Prince" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                         UseGunMastery = true
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -5076,7 +5076,7 @@ task.spawn(function()
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
                                 if (v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
                                             UseGunMastery = true
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
@@ -5168,7 +5168,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == SelectBoss then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -5207,7 +5207,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                         if v.Name == SelectBoss then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 EquipTool(SelectWeapon)
                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                 v.HumanoidRootPart.CanCollide = false
@@ -5259,7 +5259,7 @@ task.spawn(function()
                             for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                     if v.Name == "Diablo" or v.Name == "Deandre" or v.Name == "Urban" then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             v.HumanoidRootPart.CanCollide = false
@@ -5342,7 +5342,7 @@ task.spawn(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if AutoCakePrince and v.Name == "Cake Prince" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -5364,7 +5364,7 @@ task.spawn(function()
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if (v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -5420,7 +5420,7 @@ task.spawn(function()
                             for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                 if v.Name == "Dough King" then
                                     if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             v.HumanoidRootPart.CanCollide = false
@@ -5448,7 +5448,7 @@ task.spawn(function()
                             for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                 if v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker" then
                                     if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             v.HumanoidRootPart.CanCollide = false
@@ -5482,7 +5482,7 @@ task.spawn(function()
                                     for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                         if v.Name == "Diablo" or v.Name == "Urban" or v.Name == "Deandre" then
                                             if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                                repeat game:GetService("RunService").Heartbeat:Wait()
                                                     EquipTool(SelectWeapon)
                                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                                     v.HumanoidRootPart.CanCollide = false
@@ -5524,7 +5524,7 @@ task.spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel") or game:GetService("Workspace").Enemies:FindFirstChild("Sweet Thief") or game:GetService("Workspace").Enemies:FindFirstChild("Chocolate Bar Battler") or game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior") then
                             for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                 if (v.Name == "Candy Rebel" or v.Name == "Sweet Thief" or v.Name == "Chocolate Bar Battler" or v.Name == "Cocoa Warrior") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -5565,7 +5565,7 @@ task.spawn(function()
             if game.Workspace.Enemies:FindFirstChild("Core") then
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Core" and v.Humanoid.Health > 0 then
-                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                        repeat game:GetService("RunService").Heartbeat:Wait()
                             Tween(CFrame.new(448.46756, 199.356781, -441.389252))
                             EquipTool(SelectWeapon)
                             AutoClick()
@@ -5595,7 +5595,7 @@ task.spawn(function()
                         if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
                             if v.Name then
                                 if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 2000 then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -5652,7 +5652,7 @@ task.spawn(function()
                 for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                         if v.Name == MMon then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 EquipTool(SelectWeapon)
                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                 v.HumanoidRootPart.CanCollide = false
@@ -5779,11 +5779,11 @@ task.spawn(function()
                 if Second_Sea then
                     if game:GetService("Workspace").Enemies:FindFirstChild("Lava Pirate [Lv. 1200]") then
                         if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Lava Pirate").HumanoidRootPart.CFrame * CFrame.new(3,0,0)
                             until AutoFarmKen == false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
                         else
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Lava Pirate").HumanoidRootPart.CFrame * CFrame.new(0,50,0)+
                                     task.wait(1)
                                 if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
@@ -5797,11 +5797,11 @@ task.spawn(function()
                 elseif First_Sea then
                     if game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain [Lv. 650]") then
                         if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain").HumanoidRootPart.CFrame * CFrame.new(3,0,0)
                             until AutoFarmKen == false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
                         else
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain").HumanoidRootPart.CFrame * CFrame.new(0,50,0)
                                 task.wait(1)
                                 if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
@@ -5815,11 +5815,11 @@ task.spawn(function()
                 elseif Third_Sea then
                     if game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander [Lv. 1650]") then
                         if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander").HumanoidRootPart.CFrame * CFrame.new(3,0,0)
                             until AutoFarmKen == false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
                         else
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander").HumanoidRootPart.CFrame * CFrame.new(0,50,0)
                                 task.wait(1)
                                 if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
@@ -5846,13 +5846,13 @@ task.spawn(function()
             pcall(function()
                 if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen") == 3 then
                     if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Banana") and  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Apple") and game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Pineapple") then
-                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                        repeat game:GetService("RunService").Heartbeat:Wait()
                             Tween(CFrame.new(-12444.78515625, 332.40396118164, -7673.1806640625))
                         until not AutoKenV2 or (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-12444.78515625, 332.40396118164, -7673.1806640625)).Magnitude <= 10
                         task.wait(.5)
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen")
                     elseif game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fruit Bowl") or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fruit Bowl") then
-                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                        repeat game:GetService("RunService").Heartbeat:Wait()
                             Tween(CFrame.new(-10920.125, 624.20275878906, -10266.995117188))
                         until not AutoKenV2 or (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-10920.125, 624.20275878906, -10266.995117188)).Magnitude <= 10
                         task.wait(.5)
@@ -5941,7 +5941,7 @@ task.spawn(function()
                                 if game.Workspace.Enemies:FindFirstChild("Don Swan") then
                                     for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                         if v.Name == "Don Swan" and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                                            repeat game:GetService("RunService").Heartbeat:Wait()
                                                 EquipTool(SelectWeapon)
                                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                                 AutoClick()
@@ -5955,7 +5955,7 @@ task.spawn(function()
                                 if game.Workspace.Enemies:FindFirstChild("rip_indra") then
                                     for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                         if v.Name == "rip_indra" and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                                            repeat game:GetService("RunService").Heartbeat:Wait()
                                                 EquipTool(SelectWeapon)
                                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                                 AutoClick()
@@ -6005,7 +6005,7 @@ task.spawn(function()
                             if game:GetService("Workspace").Enemies:FindFirstChild("Swan Pirate") then
                                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                     if v.Name == "Swan Pirate" then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             v.HumanoidRootPart.CanCollide = false
@@ -6033,7 +6033,7 @@ task.spawn(function()
                             for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                     if v.Name == "Jeremy" then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             AutoClick()
@@ -6118,7 +6118,7 @@ task.spawn(function()
                                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                             if v.Name == "Awakened Ice Admiral" then
-                                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                                repeat game:GetService("RunService").Heartbeat:Wait()
                                                     EquipTool(SelectWeapon)
                                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                                     v.HumanoidRootPart.CanCollide = false
@@ -6248,7 +6248,7 @@ task.spawn(function()
                             for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                     if v.Name == "Tide Keeper" then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             v.HumanoidRootPart.CanCollide = false
@@ -6522,7 +6522,7 @@ task.spawn(function()
                                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                                 if v.Name == "Mob Leader" then
-                                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                                         EquipTool(SelectWeapon)
                                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                                         v.HumanoidRootPart.CanCollide = false
@@ -6553,7 +6553,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Saber Expert" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -6613,7 +6613,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Snow Lurker" or v.Name == "Arctic Warrior" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -6648,7 +6648,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Cake Queen [Lv. 2175] [Boss]" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -6681,7 +6681,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Thunder God" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -6718,7 +6718,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Beautiful Pirate" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -6774,7 +6774,7 @@ function autoTushita()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Diablo" or v.Name == "Deandre" or v.Name == "Urban" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -6936,7 +6936,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "rip_indra True Form" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     AutoClick()
@@ -6964,7 +6964,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Soul Reaper" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -7025,7 +7025,7 @@ task.spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Forest Pirate") then
                             for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                 if v.Name == "Forest Pirate" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7058,7 +7058,7 @@ task.spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Captain Elephant") then
                             for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                 if v.Name == "Captain Elephant" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7116,7 +7116,7 @@ task.spawn(function()
                             if game:GetService("Workspace").Enemies:FindFirstChild("Zombie") then
                                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                     if v.Name == "Zombie" then
-                                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                                        repeat game:GetService("RunService").Heartbeat:Wait()
                                             EquipTool(SelectWeapon)
                                             Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                             v.HumanoidRootPart.CanCollide = false
@@ -7165,7 +7165,7 @@ task.spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Swan Pirate") then
                             for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                 if v.Name == "Swan Pirate" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7205,7 +7205,7 @@ task.spawn(function()
                     if game.Workspace.Enemies:FindFirstChild("Jeremy") then
                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                             if v.Name == "Jeremy" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -7257,7 +7257,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                         if v.Name == "Don Swan" then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 EquipTool(SelectWeapon)
                                 Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                 AutoClick()
@@ -7288,7 +7288,7 @@ task.spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "rip_indra True Form" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     AutoClick()
@@ -7329,7 +7329,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Stone" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7356,7 +7356,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Island Empress" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7383,7 +7383,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Kilo Admiral" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7411,7 +7411,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Captain Elephant" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7439,7 +7439,7 @@ task.spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                 if v.Name == "Beautiful Pirate" then
-                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                         EquipTool(SelectWeapon)
                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                         v.HumanoidRootPart.CanCollide = false
@@ -7589,7 +7589,7 @@ task.spawn(function()
                                         for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                                             if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
                                                 if v.Name == "Living Zombie" then
-                                                    repeat game:GetService("RunService").Heartbeat:task.wait()
+                                                    repeat game:GetService("RunService").Heartbeat:Wait()
                                                         EquipTool(SelectWeapon)
                                                         Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                                         v.HumanoidRootPart.CanCollide = false
@@ -7732,7 +7732,7 @@ task.spawn(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Forest Pirate") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v.Name == "Forest Pirate" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -7767,7 +7767,7 @@ task.spawn(function()
                     for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name == "Island Empress" then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeapon)
                                     Tween(v.HumanoidRootPart.CFrame * Farm_Mode)
                                     v.HumanoidRootPart.CanCollide = false
@@ -7890,7 +7890,7 @@ task.spawn(function()
             pcall(function()
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Order" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                        repeat game:GetService("RunService").Heartbeat:task.wait()
+                        repeat game:GetService("RunService").Heartbeat:Wait()
                             EquipTool(SelectWeaponRaid)
                             v.HumanoidRootPart.CanCollide = false
                             Tween(v.HumanoidRootPart.CFrame * CFrame.new(0,30,0))
@@ -7971,7 +7971,7 @@ task.spawn(function()
                     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             if v.Name then
-                                repeat game:GetService("RunService").Heartbeat:task.wait()
+                                repeat game:GetService("RunService").Heartbeat:Wait()
                                     EquipTool(SelectWeaponRaid)
                                     v.Humanoid.Health = 0
                                     v.HumanoidRootPart.CanCollide = false
@@ -8289,7 +8289,7 @@ task.spawn(function()
                 for i,v in pairs(game:GetService('Workspace').Characters:GetChildren()) do
                     if v.Name == SelectedPlayer then
                         if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 EquipTool(SelectWeaponPvp)
                                 Tween(v.HumanoidRootPart.CFrame * Pvp_Mode)
                                 Player_Name = v.Name
@@ -8342,7 +8342,7 @@ task.spawn(function()
                     if v.Name == SelectedPlayer then
                          if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                             Player_Position = v.HumanoidRootPart.Position
-                            repeat game:GetService("RunService").Heartbeat:task.wait()
+                            repeat game:GetService("RunService").Heartbeat:Wait()
                                 if game:GetService("Players").LocalPlayer.Character:FindFirstChild(SelectWeaponPvp) then
                                     game:GetService("Players").LocalPlayer.Character:FindFirstChild(SelectWeaponPvp).MousePos.Value = Player_Position
                                     if PvpSkillZ then
@@ -9702,7 +9702,7 @@ Misc_1:addButton("Join Marines Team", function()
 end)
 
 Misc_1:addButton("Always Day", function()
-    while game:GetService("RunService").Heartbeat:task.wait() do
+    while game:GetService("RunService").Heartbeat:Wait() do
         game:GetService("Lighting").ClockTime = 12
     end
 end)
